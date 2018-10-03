@@ -5,8 +5,11 @@
     <li>Comedian: <%= c.name %></li>
     <li>Age: <%= c.age %></li>
     <li>City: <%= c.city %>
-    <li>Specials: <% c.specials.each do |special| %>
-      <%= special.name %>
+    <% c.specials.each do |special| %>
+      <li>Special Name: <%= special.name %></li>
+      <li>Run Time: <%= special.run_time %> Minutes</li>
+      <img src="<%= special.image_url %>", width="100px">
+
       <br>
     <% end %>
   </ul>
