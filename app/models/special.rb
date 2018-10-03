@@ -4,6 +4,6 @@ class Special < ActiveRecord::Base
   belongs_to :comedian
 
   def self.avg_run
-    average(:run_time)
+    average(:run_time).to_i
   end
 end
