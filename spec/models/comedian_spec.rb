@@ -1,17 +1,7 @@
-RSpec.describe Comedian do
+RSpec.describe Comedian, type: :model do
   describe 'Validations' do
-    describe 'Required Field(s)' do
-      it 'should be invalid if missing a name' do
-        comic = Comedian.create(age: 48)
-        
-        expect(comic).to_not be_valid
-      end
+    it {should validate_presence_of(:name)}
+    it {should validate_presence_of(:age)}
 
-      it 'should be invalid if missing an age' do
-        comic = Comedian.create(name: 'Mitch Hedberg')
-
-        expect(comic).to_not be_valid
-      end
-    end
   end
 end

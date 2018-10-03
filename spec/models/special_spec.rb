@@ -1,11 +1,8 @@
-RSpec.describe Special do
+RSpec.describe Special, type: :model do
   describe 'Validations' do
-    describe 'Required Field(s)' do
-      it 'should be invalid if missing a name' do
-        special = Special.create
-        
-        expect(special).to_not be_valid
-      end
-    end
+    it {should validate_presence_of(:name)}
+    it {should validate_presence_of(:image_url)}
+    it {should validate_presence_of(:run_time)}
+
   end
 end
