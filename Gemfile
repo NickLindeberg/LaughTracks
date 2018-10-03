@@ -14,4 +14,6 @@ group :development, :test do
   gem 'rspec'
   gem 'shotgun'
   gem 'tux'
+  gem 'shoulda-matchers'
+
 end
