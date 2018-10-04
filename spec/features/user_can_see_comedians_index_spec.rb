@@ -5,7 +5,7 @@ RSpec.describe 'Comedian Index Page' do
 
       visit '/comedians'
 
-      within("#comic") do
+      within("#comic-1") do
         expect(page).to have_content("Comedian: #{comic_1.name}")
         expect(page).to have_content("Age: #{comic_1.age}")
         expect(page).to have_content("City: #{comic_1.city}")
@@ -70,10 +70,10 @@ RSpec.describe 'Comedian Index Page' do
 
       visit '/comedians'
 
-#need to add within to this test.
       expect(page).to have_content(comic_1.city)
       expect(page).to have_content(comic_2.city)
-      # expect(page).to_not have_content(comic_3.city)
+      # expect(page).to_not have_css("-3")
+      #does not apprear more than once
 
     end
   end
