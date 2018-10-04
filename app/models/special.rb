@@ -6,4 +6,9 @@ class Special < ActiveRecord::Base
   def self.avg_run
     average(:run_time).to_i
   end
+
+  def self.total_specials
+    Special.count
+  end
+
 end

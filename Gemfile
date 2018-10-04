@@ -15,5 +15,6 @@ group :development, :test do
   gem 'shotgun'
   gem 'tux'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 
 end
