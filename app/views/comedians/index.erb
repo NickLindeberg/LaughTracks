@@ -1,17 +1,38 @@
 <h1>All Comedians</h1>
 
+<h2>Statistics<h2>
+  <h3>Average Age</h3>
+    <div id='av_age'>
+      <%= @comedians.avg_age %> years old
+    </div>
+    <h3>Average TV Special Run Time</h3>
+    <div id="av_run">
+      <%= @specials.avg_run %> minutes
+    </div>
+    <h3>Total TV Specials</h3>
+      <%= @specials.total_specials %> specials
+
+    <h3>Cities</h3>
+      <% @cities.each do |city| %>
+        <%= city %>
+      <% end %>
+
 <% @comedians.each do |c| %>
   <ul>
-    <li>Comedian: <%= c.name %></li>
-    <li>Age: <%= c.age %></li>
-    <li>City: <%= c.city %>
-    <% c.specials.each do |special| %>
-      <li>Special Name: <%= special.name %></li>
-      <li>Run Time: <%= special.run_time %> Minutes</li>
-      <img src="<%= special.image_url %>", width="100px">
+    <div id="comic">
+      <li>Comedian: <%= c.name %></li>
+      <li>Age: <%= c.age %></li>
+      <li>City: <%= c.city %>
+        <div id="specials">
+          <% c.specials.each do |special| %>
+            <li>Special Name: <%= special.name %></li>
+            <li>Run Time: <%= special.run_time %> Minutes</li>
+            <img src="<%= special.image_url %>", width="100px">
 
-      <br>
-    <% end %>
+      <% end %>
+      </div>
+    </div>
+
   </ul>
 
 <% end %>
