@@ -1,13 +1,30 @@
-RSpec.describe 'Comedian Index Page' do
-  describe 'user can see information about each comedian' do
-    it 'shows comedian attributes' do
-      comic_1 = Comedian.create(name: "Jim Bob", age: 48, city: "Denver")
+RSpec.describe 'As a user' do
+  describe 'user can create a new comedian' do
+    it 'adds comedian to index' do
 
       visit '/comedians'
 
-      within("#comic-1") do
-        expect(page).to have_content("Comedian: #{comic_1.name}")
-        expect(page).to have_content("Age: #{comic_1.age}")
-        expect(page).to have_content("City: #{comic_1.city}")
-      end
+      click_link "Add Comedian"
+
+      expect(current_path).to eq("/comedians/new")
+
+      new_comedian = "Ben G"
+      new_comedian_city = "Anchorage"
+
+      fill_in "comedian[name]", with: new_comedian
+      fill_in "comedian[age]", with: 29
+      fill_in "comedian[city]", with: new_comedian_city
+
+      click_button "Submit"
+
+      last_comedian = Comedian.last
+
+      expect(current_path).to eq("/comedians")
+
+      expect(page).to have_content(last_comedian.name)
+      expect(page).to have_content(last_comedian.age)
+      expect(page).to have_content(last_comedian.city)
+
     end
+  end
+end

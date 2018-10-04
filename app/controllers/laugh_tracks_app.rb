@@ -11,4 +11,14 @@ class LaughTracksApp < Sinatra::Base
       @cities = Comedian.distinct.pluck(:city)
     erb :'comedians/index'
   end
+
+  get '/comedians/new' do
+    erb :"comedians/new"
+  end
+
+  post '/comedians' do
+    comedian = Comedian.create(params[:comedian])
+    comedian.save
+    redirect "/comedians"
+  end
 end
