@@ -24,7 +24,6 @@ RSpec.describe 'As a user' do
       expect(page).to have_content(last_comedian.name)
       expect(page).to have_content(last_comedian.age)
       expect(page).to have_content(last_comedian.city)
-
     end
   end
 end

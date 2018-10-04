@@ -11,4 +11,8 @@ class Special < ActiveRecord::Base
     Special.count
   end
 
+  def self.filter_specials(ids)
+    Special.where(comedian_id: ids)
+  end
+
 end

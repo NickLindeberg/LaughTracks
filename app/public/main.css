@@ -1,6 +1,7 @@
 body {
     background: #30C5FF;
-    background-image: 'mic.jpg';
+    background-image: url('mic.jpg');
+    background-size: auto;
 }
 
 h1 {

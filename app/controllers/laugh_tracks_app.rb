@@ -4,11 +4,13 @@ class LaughTracksApp < Sinatra::Base
   get '/comedians' do
     if params[:age]
       @comedians = Comedian.where(age: params[:age])
+      ids = @comedians.pluck(:id)
+      @specials = Special.filter_specials(ids)
     else
       @comedians = Comedian.all
-    end
       @specials = Special.all
-      @cities = Comedian.distinct.pluck(:city)
+    end
+    @cities = @comedians.filter_cities
     erb :'comedians/index'
   end
 
