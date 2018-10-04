@@ -16,10 +16,11 @@
       <%= @specials.total_specials %> specials
 
     <h3>Cities</h3>
-      <div id=
-      <% @cities.each do |city| %>
-        <%= city %>
-      <% end %>
+      <div class='cities'>
+        <% @cities.each do |city| %>
+          <%= city %>
+        <% end %>
+      </div>
 
 
 <% @comedians.each do |c| %>
@@ -35,8 +36,8 @@
             <li>Run Time: <%= special.run_time %> Minutes</li>
             <img src="<%= special.image_url %>">
 
-      <% end %>
-      </div>
+            <% end %>
+        </div>
     </div>
 
   </ul>
