@@ -15,7 +15,7 @@ RSpec.describe 'As a user' do
       fill_in "comedian[age]", with: 29
       fill_in "comedian[city]", with: new_comedian_city
 
-      click_button "Submit"
+      click_button "Create Comedian"
 
       last_comedian = Comedian.last
 

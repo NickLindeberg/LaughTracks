@@ -1,27 +1,30 @@
 <h1>All Comedians</h1>
 
-<a href="/comedians/new">Add Comedian</a>
+<div class="container-fluid">
 
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2 class="title">Statistics</h2>
+          <h2>Average Age</h2>
+            <div id='av_age'>
+              <h4><%= @comedians.avg_age %> years old</h4>
+            </div>
+            <h2>Average TV Special Run Time</h2>
+            <div id="av_run">
+              <h4><%= @specials.avg_run %> minutes</h4>
+            </div>
+            <h2>Total TV Specials</h2>
+              <h4><%= @specials.total_specials %> specials</h4>
 
-<h2>Statistics<h2>
-  <h3>Average Age</h3>
-    <div id='av_age'>
-      <%= @comedians.avg_age %> years old
-    </div>
-    <h3>Average TV Special Run Time</h3>
-    <div id="av_run">
-      <%= @specials.avg_run %> minutes
-    </div>
-    <h3>Total TV Specials</h3>
-      <%= @specials.total_specials %> specials
-
-    <h3>Cities</h3>
-      <div class='cities'>
-        <% @cities.each do |city| %>
-          <%= city %>
-        <% end %>
+            <h2>Cities</h2>
+              <div class='cities'>
+                <% @cities.each do |city| %>
+                  <h5><%= city %></h5>
+                <% end %>
+              </div>
+            </div></p>
       </div>
-
+    </div>
 
 <% @comedians.each do |c| %>
   <ul>
@@ -38,8 +41,9 @@
 
             <% end %>
         </div>
-    </div>
 
   </ul>
 
 <% end %>
+
+</div>

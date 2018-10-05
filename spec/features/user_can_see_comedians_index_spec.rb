@@ -70,10 +70,10 @@ RSpec.describe 'Comedian Index Page' do
 
       visit '/comedians'
 
-
-      within(".cities") do 
+      within(".cities") do
         expect(page).to have_content(comic_1.city, count: 1)
         expect(page).to have_content(comic_2.city, count: 1)
+        
       end
     end
   end
