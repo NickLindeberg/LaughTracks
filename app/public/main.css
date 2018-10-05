@@ -2,6 +2,7 @@ body {
     background: #30C5FF;
     background-image: url('vint.png');
     background-position: top;
+    color: white;
 }
 
 h1 {
@@ -11,15 +12,47 @@ h1 {
 }
 
 h2 {
-  color: white;
+  color: Black;
   font-style: italic;
   text-align: center;
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  color: blue;
 }
 
 img {
   width: 100px;
 }
 
-#card border-dark mb-3 {
+.card border-dark mb-3 {
   text-align: center;
+}
+
+.container-2 {
+  margin-top: 50px;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 30px;
+}
+
+.new-comedian {
+  text-align: center;
+  font-size: 30px;
+}
+
+.jumbotron-fluid {
+  color: blue;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 75px;
 }
