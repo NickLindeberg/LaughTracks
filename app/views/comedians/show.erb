@@ -1,0 +1,13 @@
+<h1><%= @title %></h1>
+
+<h3>Age: <%= @comedian.age %></h3>
+<h3>Home Town: <%= @comedian.city %></h3>
+
+
+<% @specials.each do |s| %>
+  <%= s.name %>
+  <%= s.run_time %>
+  <br>
+  <img src="<%= s.image_url %>">
+  <br>
+<% end %>

@@ -43,7 +43,8 @@
       <div class="card">
         <div class="card-body">
           <div id="comic">
-          <h3><%= c.name %></h3>
+
+            <a href="/comedians/<%= c.id %>"><h3><%= c.name %></h3></a>
           <h5><li>Age: <%= c.age %></li></h5>
           <h5><li>City: <%= c.city %></li><h5>
           <h5><li>Total Specials: <%= c.com_specs %>
