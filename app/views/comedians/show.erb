@@ -1,13 +1,15 @@
-<h1><%= @title %></h1>
 
-<h3>Age: <%= @comedian.age %></h3>
-<h3>Home Town: <%= @comedian.city %></h3>
+<div class="jumbotron jumbotron-fluid">
+  <h2><%= @title %></h2>
+
+  <h3>Age: <%= @comedian.age %></h3>
+  <h3>Home Town: <%= @comedian.city %></h3>
 
 
-<% @specials.each do |s| %>
-  <%= s.name %>
-  <%= s.run_time %>
+  <% @specials.each do |s| %>
+    <h4><%= s.name %></h4>
+    <h4><%= s.run_time %></h4>
+    <img src="<%= s.image_url %>">
+  <% end %>
   <br>
-  <img src="<%= s.image_url %>">
-  <br>
-<% end %>
+</div>

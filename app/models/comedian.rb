@@ -13,6 +13,7 @@ class Comedian < ActiveRecord::Base
 
   def self.filter_cities
     distinct.pluck(:city)
+    
   end
 
 end
