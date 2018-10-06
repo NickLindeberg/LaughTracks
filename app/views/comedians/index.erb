@@ -1,49 +1,50 @@
 <h1>All Comedians</h1>
-
 <div class="container-fluid">
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h2 class="title">Statistics</h2>
-          <h2>Average Age</h2>
-            <div id='av_age'>
-              <h4><%= @comedians.avg_age %> years old</h4>
-            </div>
-            <h2>Average TV Special Run Time</h2>
-            <div id="av_run">
-              <h4><%= @specials.avg_run %> minutes</h4>
-            </div>
-            <h2>Total TV Specials</h2>
-              <h4><%= @specials.total_specials %> specials</h4>
-
-            <h2>Cities</h2>
-              <div class='cities'>
-                <% @cities.each do |city| %>
-                  <h5><%= city %></h5>
-                <% end %>
-              </div>
-            </div></p>
+  <div class="jumbotron jumbotron-fluid", >
+    <div class="container">
+      <h2 class="title">Statistics</h2>
+      <h2>Average Age</h2>
+      <div id='av_age'>
+        <h4><%= @comedians.avg_age %> years old</h4>
       </div>
-    </div>
+      <h2>Average TV Special Run Time</h2>
+      <div id="av_run">
+        <h4><%= @specials.avg_run %> minutes</h4>
+      </div>
+      <h2>Total TV Specials</h2>
+      <h4><%= @specials.total_specials %> specials</h4>
 
-<% @comedians.each do |c| %>
-  <ul>
-    <div id=<%= "comic-#{c.id}" %>>
-      <li>Comedian: <%= c.name %></li>
-      <li>Age: <%= c.age %></li>
-      <li>City: <%= c.city %>
-      <li>Specials: <%= c.com_specs %>
-        <div id="specials">
-          <% c.specials.each do |special| %>
-            <li>Special Name: <%= special.name %></li>
-            <li>Run Time: <%= special.run_time %> Minutes</li>
-            <img src="<%= special.image_url %>">
-
-            <% end %>
-        </div>
-
-  </ul>
-
-<% end %>
-
+      <h2>Cities</h2>
+      <div class='cities'>
+        <% @cities.each do |city| %>
+        <h5><%= city %></h5>
+        <% end %>
+      </div>
+    </div></p>
+  </div>
 </div>
+
+
+<main class="container">
+  <div class="card-columns">
+    <% @comedians.each do |c| %>
+      <div class="card">
+        <div class="card-body">
+          <h3><%= c.name %></h3>
+          <li>Age: <%= c.age %></li>
+          <li>City: <%= c.city %>
+          <li>Specials: <%= c.com_specs %>
+            <div id="specials">
+              <% c.specials.each do |special| %>
+                <li>Special Name: <%= special.name %></li>
+                <li>Run Time: <%= special.run_time %> Minutes</li>
+                <img src="<%= special.image_url %>">
+
+                <% end %>
+            </div>
+        </div>
+        <% end %>
+      </div>
+  </div>
+</main>

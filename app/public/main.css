@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-  color: black;
+  color: white;
 }
 
 h4 {
@@ -26,7 +26,7 @@ h4 {
 }
 
 img {
-  width: 100px;
+  height: 100px;
 }
 
 .card border-dark mb-3 {
@@ -55,4 +55,13 @@ img {
 
 .title {
   font-size: 75px;
+}
+
+.card-body {
+  background-color: grey;
+  border-radius: 10%;
+}
+
+.card {
+  border-radius: 10%;
 }
