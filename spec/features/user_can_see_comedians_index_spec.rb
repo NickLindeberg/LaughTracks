@@ -4,9 +4,10 @@ RSpec.describe 'Comedian Index Page' do
       comic_1 = Comedian.create(name: "Jim Bob", age: 48, city: "Denver")
 
       visit '/comedians'
+      save_and_open_page
 
-      within("#comic-1") do
-        expect(page).to have_content("Comedian: #{comic_1.name}")
+      within("#comic") do
+        expect(page).to have_content("#{comic_1.name}")
         expect(page).to have_content("Age: #{comic_1.age}")
         expect(page).to have_content("City: #{comic_1.city}")
       end
