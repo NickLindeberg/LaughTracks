@@ -1,6 +1,11 @@
 require_relative '../app/models/comedian'
 require_relative '../app/models/special'
 
+ben = Comedian.create(name: "Ben Ghalami", age: 29, city: "Fairbanks")
+ben.specials.create(name: "Alkaline Carlton's Lament", run_time: 200, image_url: "https://pbs.twimg.com/profile_images/930149559413620736/kheROaAh_400x400.jpg")
+ben.specials.create(name: "Hey Ya Cover", run_time: 120, image_url: "https://media.licdn.com/dms/image/C4E03AQEwcZKVsC3BlA/profile-displayphoto-shrink_800_800/0?e=1544054400&v=beta&t=tkDkrvLv2yUm5vjRLVBuPCB_4kbhPjzxZADXv4NgolI")
+ben.specials.create(name: "Billie Jean Cover", run_time: 200, image_url: "https://pbs.twimg.com/media/BKCCdWdCMAAXW37.jpg")
+
 rob = Comedian.create(name: "Rob Dyrdek", age: 44, city: "Kettering")
 rob.specials.create(name: "Rob and Big", run_time: 60, image_url: "https://media.tenor.com/images/b405b9350c6e5a5058df75ae5f2bf3fd/tenor.gif")
 rob.specials.create(name: "Fantasy Factory", run_time: 40, image_url: "https://pmchollywoodlife.files.wordpress.com/2014/03/fantasy-factor-new-season-promo-ftr.jpg?w=600")
@@ -49,3 +54,7 @@ mike.specials.create(name: "Shrek", run_time: 66, image_url: "https://is1-ssl.mz
 kate = Comedian.create(name: "Kate Micucci", age: 38, city: "Jersey City")
 kate.specials.create(name: "Trying To Be Special", run_time: 567, image_url: "https://m.media-amazon.com/images/M/MV5BNGQ4MTY3YTAtZTM1ZC00NTNkLTkxOWEtMjEyOWUxNzI1NjE3XkEyXkFqcGdeQXVyNTEzNDk3NDc@._V1_.jpg")
 kate.specials.create(name: "Garfunkel and Oates", run_time: 321, image_url: "https://images-na.ssl-images-amazon.com/images/I/91LKPCetr6L._SY445_.jpg")
+
+ben = Comedian.create(name: "Ben Ghalami", age: 29, city: "Fairbanks")
+ben.specials.create(name: "Alkaline Carlton's Lament", run_time: 200, image_url: "https://pbs.twimg.com/profile_images/930149559413620736/kheROaAh_400x400.jpg")
+ben.specials.create(name: "Garfunkel and Oates", run_time: 120, image_url: "https://media.licdn.com/dms/image/C4E03AQEwcZKVsC3BlA/profile-displayphoto-shrink_800_800/0?e=1544054400&v=beta&t=tkDkrvLv2yUm5vjRLVBuPCB_4kbhPjzxZADXv4NgolI")

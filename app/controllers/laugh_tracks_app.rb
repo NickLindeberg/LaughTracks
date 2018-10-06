@@ -23,4 +23,12 @@ class LaughTracksApp < Sinatra::Base
     comedian.save
     redirect "/comedians"
   end
+
+  get '/comedians/:id' do
+    @comedian = Comedian.find(params[:id])
+    @specials = @comedian.specials
+    @title = "#{@comedian.name}"
+    erb :'comedians/show'
+  end
+
 end
